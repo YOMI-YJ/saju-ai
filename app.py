@@ -89,14 +89,6 @@ if submitted:
 if "pillars" in st.session_state:
     pillars = st.session_state["pillars"]
 
-    st.subheader("🧧 사주팔자")
-    st.markdown(f"""
-    - **년주**: {pillars['년주']}
-    - **월지**: {pillars['월지']}
-    - **일주**: {pillars['일주']}
-    - **시지**: {pillars['시지']}
-    """)
-
     if "default_response" in st.session_state:
         st.subheader("🧠 기본 해석")
         st.write(st.session_state["default_response"])
