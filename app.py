@@ -50,13 +50,15 @@ def get_four_pillars(birth_str: str):
 
 # ===== Streamlit 앱 시작 =====
 st.set_page_config(page_title="🔮 사주팔자 해석 챗봇", layout="centered")
-st.title("🔮 GPT 기반 사주팔자 해석 챗봇")
+st.title("🔮 재미로 보는 GPT 기반 사주 해석")
+st.title( "  (feat. 4천년의 통계학!)" )
+
 
 # 사용자 생년월일 입력
 with st.form("birth_form"):
     birth_date = st.date_input("생년월일", min_value=datetime(1900, 1, 1))
     birth_time = st.time_input("출생 시각")
-    submitted = st.form_submit_button("사주팔자 계산")
+    submitted = st.form_submit_button("내 사주 보기!")
 
 # 사주 계산 + 기본 해석 저장
 if submitted:
