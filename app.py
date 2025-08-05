@@ -135,7 +135,7 @@ if "pillars" in st.session_state:
 
     # 사용자 자유 질문
     st.markdown("---")
-    user_prompt = st.text_input("✏️ 추가로 궁금한 점이 있다면 질문해보세요!", placeholder="예: 결혼운은 언제쯤 좋을까요?")
+    user_prompt = st.text_input("💬 전하의 궁금하신 점을 말씀하여 주시옵소서", placeholder="예: 결혼운은 언제쯤 좋겠느냐?")
     if user_prompt:
         followup_prompt = f"""
 사주팔자:
