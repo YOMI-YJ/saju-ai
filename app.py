@@ -3,6 +3,7 @@ from datetime import datetime
 from openai import OpenAI
 import os
 from dotenv import load_dotenv
+from datetime import time
 
 # ===== API 키 로드 =====
 load_dotenv()
