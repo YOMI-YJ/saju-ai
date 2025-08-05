@@ -56,7 +56,7 @@ st.markdown("<span style='font-size:14px; color: gray;'>GPT는 거짓말을 할 
 # 사용자 생년월일 입력
 with st.form("birth_form"):
     birth_date = st.date_input("생년월일", min_value=datetime(1900, 1, 1))
-    birth_time = st.time_input("출생 시각")
+    birth_time = st.time_input("출생 시각", value=time(0, 0))
     submitted = st.form_submit_button("내 사주 보기!")
 
 # 사주 계산 + 기본 해석
