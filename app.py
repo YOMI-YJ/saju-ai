@@ -68,13 +68,20 @@ if submitted:
     # 기본 해석
     pillars = st.session_state["pillars"]
     default_prompt = f"""
-아래 사주팔자를 바탕으로 이 사람의 전반적인 성격, 오행 경향, 특징을 분석해줘.
+다음 사주 정보를 바탕으로, 이 사람의 전반적인 사주 해석을 아래 형식에 따라 출력해줘.
 
 사주팔자:
 - 년주: {pillars['년주']}
 - 월지: {pillars['월지']}
 - 일주: {pillars['일주']}
 - 시지: {pillars['시지']}
+
+[출력 형식]
+
+1. 🧬 성격 요약: 한 줄로 요약
+2. 🔥 오행 분석: 오행의 균형, 강점, 약점
+3. 💡 사주 특징 요약: 특이사항, 눈에 띄는 점
+4. 🧭 전반적 조언: 전체적인 삶의 방향성에 대한 조언
 """
     st.session_state["default_response"] = ask_gpt(default_prompt)
 
@@ -103,18 +110,28 @@ if "pillars" in st.session_state:
 
     if st.button("운세 해석 보기"):
         prompt = f"""
-다음 사주 정보를 기반으로, {selected_year}년의 {selected_topic}을 중심으로 해석해줘.
+    다음 사주 정보를 기반으로, {selected_year}년의 {selected_topic}을 중심으로 해석해줘.
 
-사주팔자:
-- 년주: {pillars['년주']}
-- 월지: {pillars['월지']}
-- 일주: {pillars['일주']}
-- 시지: {pillars['시지']}
-"""
+    사주팔자:
+    - 년주: {pillars['년주']}
+    - 월지: {pillars['월지']}
+    - 일주: {pillars['일주']}
+    - 시지: {pillars['시지']}
+
+    다음 형식으로 출력해줘:
+
+    1. 🔍 운세 요약: 한 줄 요약
+    2. 📌 상세 운세:
+    - 성향 분석:
+    - 주의할 점:
+    - 추천 행동:
+    3. 🧭 종합 조언: 전체적인 마무리 조언
+    """
         with st.spinner("GPT가 운세를 보는 중..."):
             fortune = ask_gpt(prompt)
         st.subheader(f"🔮 {selected_year}년 {selected_topic} 운세")
         st.write(fortune)
+
 
     # 사용자 자유 질문
     st.markdown("---")
