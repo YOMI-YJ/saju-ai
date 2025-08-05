@@ -51,7 +51,10 @@ def get_four_pillars(birth_str: str):
 # ===== Streamlit 앱 시작 =====
 st.set_page_config(page_title="🔮 사주팔자 해석 챗봇", layout="centered")
 st.markdown("<h3>🔮 4천년의 통계학! 재미로 보는 GPT 기반 사주 해석</h3>", unsafe_allow_html=True)
-
+st.markdown(
+    "<span style='font-size:14px; color: gray;'>GPT는 거짓말을 할 수도 있어요~</span>",
+    unsafe_allow_html=True
+)
 
 
 # 사용자 생년월일 입력
