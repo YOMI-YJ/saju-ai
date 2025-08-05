@@ -12,7 +12,7 @@ client = OpenAI(api_key=API_KEY)
 # ===== GPT 호출 함수 =====
 def ask_gpt(prompt: str) -> str:
     response = client.chat.completions.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4o-mini",
         messages=[
             {"role": "system", "content": "너는 명리학 전문가야. 사주팔자 정보를 바탕으로 성격, 오행, 궁합, 운세를 분석해줘."},
             {"role": "user", "content": prompt}
