@@ -72,13 +72,15 @@ if submitted:
     # 기본 해석 프롬프트
     pillars = st.session_state["pillars"]
     default_prompt = f"""
-아래 사주팔자를 바탕으로 이 사람의 전반적인 성격, 오행 경향, 특징을 분석해줘.
+다음 사주팔자의 해석을 다음 형식에 따라 제공해주세요.
 
-사주팔자:
-- 년주: {pillars['년주']}
-- 월지: {pillars['월지']}
-- 일주: {pillars['일주']}
-- 시지: {pillars['시지']}
+1. 사주 구성: {saju_string}
+2. 성격 특성
+3. 오행의 균형 분석
+4. 직업/적성 추천
+5. 연애 및 대인 관계
+6. 궁합 잘 맞는 사주 유형
+7. 종합 평가
 """
     st.session_state["default_response"] = ask_gpt(default_prompt)
 
