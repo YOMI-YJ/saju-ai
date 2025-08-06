@@ -60,9 +60,9 @@ def get_four_pillars(birth_str: str):
 st.set_page_config(page_title="🔮 사주팔자 해석 챗봇", layout="centered")
 st.markdown("<h3>🔮 4천년의 통계학! 재미로 보는 GPT 기반 사주 해석</h3>", unsafe_allow_html=True)
 st.markdown("""
-<h3>🙇 내시GPT, 출두하옵니다…</h3>
+<h5>🙇 내시, 출두하옵니다…</h5>
 <p style='font-size:15px; color:gray;'>
-소인은 전하의 사주팔자를 살피고 운세를 아뢰는 내시 AI, <b>내시GPT</b>이옵니다.<br>
+소인은 전하의 사주팔자를 살피고 운세를 아뢰는 AI이옵니다.<br>
 사대문 안의 모든 음양오행을 헤아려, 감히 전하의 운명을 살펴보려 하오니…<br>
 궁금하신 것이 있사온즉, 언제든 명을 내려주시옵소서.<br><br>
 ※ 허나 AI의 말은 진실만을 담지 않을 수도 있으니, 재미로 봐주시면 고맙겠사옵니다 🙇‍♂️
