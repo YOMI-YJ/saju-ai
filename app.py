@@ -69,8 +69,6 @@ st.markdown("""
 </p>
 """, unsafe_allow_html=True)
 
-st.markdown("<h6>🙇즈언하~ 생일을 입력해 주시옵소서.</h6>", unsafe_allow_html=True)
-
 # 사용자 생년월일 입력
 with st.form("birth_form"):
     birth_date = st.date_input("생년월일", min_value=datetime(1900, 1, 1))
